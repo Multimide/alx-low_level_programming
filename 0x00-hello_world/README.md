@@ -4,3 +4,4 @@ Sizes of character
 Intel
 INTEL
 Intel syntax
+Intel Syntax
