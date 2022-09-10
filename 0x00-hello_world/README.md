@@ -3,3 +3,4 @@ printf function
 Sizes of character
 Intel
 INTEL
+Intel syntax
