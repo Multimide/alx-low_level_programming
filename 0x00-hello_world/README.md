@@ -1,3 +1,1 @@
-My first C poject
-Compiler
-Assembler
+Use of compiler
