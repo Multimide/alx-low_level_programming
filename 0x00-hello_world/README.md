@@ -5,3 +5,4 @@ Intel
 INTEL
 Intel syntax
 Intel Syntax
+The write function
