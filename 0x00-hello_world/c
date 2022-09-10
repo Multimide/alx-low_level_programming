@@ -723,15 +723,9 @@ extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
 # 2 "4-puts.c" 2
+# 10 "4-puts.c"
 
-
-
-
-
-
-
-
-# 9 "4-puts.c"
+# 10 "4-puts.c"
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");

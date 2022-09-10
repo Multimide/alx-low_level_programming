@@ -2,9 +2,10 @@
 
 
 /**
- *This is a C code that prints
+ *main - This is a C code that prints
  *Programming is like building a multilingual puzzle
  *using the puts function
+ *Return: Always 0 (Sucess)
 */
 int main(void)
 {

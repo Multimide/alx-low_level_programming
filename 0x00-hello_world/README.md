@@ -1,3 +1,1 @@
-Use of compiler
-Print
-Puts function
+puts function
