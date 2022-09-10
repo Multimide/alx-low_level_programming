@@ -1,1 +1,2 @@
 puts function
+printf function
