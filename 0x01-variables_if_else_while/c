@@ -2070,19 +2070,18 @@ extern int __overflow (FILE *, int);
 
 
 
-
-# 11 "0-positive_or_negative.c"
+# 10 "0-positive_or_negative.c"
 int main(void)
 {
 int n;
 srand(time(0));
 n = rand() - 
-# 15 "0-positive_or_negative.c" 3 4
+# 14 "0-positive_or_negative.c" 3 4
             2147483647 
-# 15 "0-positive_or_negative.c"
+# 14 "0-positive_or_negative.c"
                      / 2;
 
-if (n > 0;
+if (n > 0)
 {
 printf("%d is positive\n", n);
 }
@@ -2097,5 +2096,4 @@ else
 printf("%d is negative\n", n);
 }
 return (0);
-
 }

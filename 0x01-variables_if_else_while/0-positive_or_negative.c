@@ -1,11 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
- *main- This is a C programm that prints if a
- *number is positive or negative
- *
- *Return: Always 0 (sucess)
+/**
+ *main- This is a C programm using if
+ *and else loopp
+ *Return: Always 0 (Sucess)
  */
 
 int main(void)
