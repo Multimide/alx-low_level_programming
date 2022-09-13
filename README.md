@@ -1,1 +1,1 @@
-My first C project
+C functions and nested loops
