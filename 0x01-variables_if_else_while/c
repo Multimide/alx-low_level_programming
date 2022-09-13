@@ -1,10 +1,10 @@
-# 1 "9-print_comb.c"
+# 1 "100-print_comb3.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "9-print_comb.c"
+# 1 "100-print_comb3.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,7 +722,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "9-print_comb.c" 2
+# 2 "100-print_comb3.c" 2
 
 
 
@@ -730,30 +730,26 @@ extern int __overflow (FILE *, int);
 
 
 
-# 8 "9-print_comb.c"
+# 8 "100-print_comb3.c"
 int main(void)
 {
- int a = '0';
+ int tens, ones;
 
- while (a <= '9')
+ for (tens = 0; tens <= 9; tens++)
  {
-  putchar(a);
-
-  if (a == 9)
+  for (ones = tens + 1; ones <= 9; ones++)
   {
-   putchar('\n');
+   putchar(tens + '0');
+   putchar(ones + '0');
 
-   return (0);
+   if (tens < 0)
+   {
+    putchar(',');
+    putchar(' ');
 
+   }
   }
-
-  else
-  {
-   putchar(',');
-   putchar(' ');
-   a++;
-  }
-
  }
- return (0);
+ putchar('\n')
+  return (0);
 }
