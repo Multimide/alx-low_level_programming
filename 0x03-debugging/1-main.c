@@ -15,7 +15,7 @@ int main(void)
 	/**
 	 *while (i < 10)
 	 *{
-	 *	purchar(1);
+	 *	purchar(i);
 	 *}
 	 */
 	printf("Infinite loop avoided! \\o/n");
