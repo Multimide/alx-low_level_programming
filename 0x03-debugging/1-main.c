@@ -18,8 +18,7 @@ int main(void)
 	 *	purchar(1);
 	 *}
 	 */
-
-	printf("Inifinite loop avoided! \\o/n");
+	printf("Infinite loop avoided! \\o/n");
 
 	return (0);
 }
