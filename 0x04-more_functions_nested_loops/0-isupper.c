@@ -1,15 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _isupper- This is a function that checks if a
- * character is uppercased or not
- *
+ * _isupper- checks for uppercase
  * @c: arguement to be passed to the function
- *
  * Return: 1 if uppercae or 0 if not
  */
-
 int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
