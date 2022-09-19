@@ -11,5 +11,5 @@ void reset_to_98(int *n)
 {
 	*n = 98;
 
-	printf("*n\n");
+	printf("%c\n", *n);
 }
