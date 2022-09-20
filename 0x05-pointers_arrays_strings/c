@@ -1,10 +1,10 @@
-# 1 "8-print_array.c"
+# 1 "100-atoi.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "8-print_array.c"
+# 1 "100-atoi.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,7 +722,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "8-print_array.c" 2
+# 2 "100-atoi.c" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 26 "/usr/include/string.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -1002,18 +1002,38 @@ extern char *stpncpy (char *__restrict __dest,
      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
 # 499 "/usr/include/string.h" 3 4
 
-# 3 "8-print_array.c" 2
-# 12 "8-print_array.c"
+# 3 "100-atoi.c" 2
 
-# 12 "8-print_array.c"
-void print_array(int *a, int n)
+
+
+
+
+
+
+
+# 10 "100-atoi.c"
+int _atoi(char *s)
 {
- int i, c;
+ int counter = 0;
+ int i = 0;
+ unsigned int result = 0;
+ int sign = 0;
 
- for (i = 0; i <= n; i++)
+ while (s[counter] != '\0')
  {
-  c = a[i];
-  printf("%d ", c);
+  if (s[counter] == '-')
+   sign++;
+  if (s[counter] >= 48 && s[counter] <= 57)
+  {
+   i++;
+   result = result * 10 + s[counter] - '0';
+  if (i > 0 && (s[counter] < 48 || s[counter] > 57))
+   break;
+ counter++;
  }
- printf("\n");
+ if (i == 0)
+  return (0);
+ if (sign % 2 == 0)
+  return (result);
+ return (result * -1);
 }
