@@ -14,15 +14,22 @@ void puts_half(char *str)
 
 	len = strlen(str);
 
-	for (i = len / 2; i < len; i++)
+	if (len % 2 != 0)
 	{
-		if (len % 2 != 0)
+		for (i = (len / 2) + 1; i < len; i++)
 		{
-			i += 1;
+			c = str[i];
+			putchar(c);
 		}
+	}
 
-		c = str[i];
-		putchar(c);
+	else
+	{
+		for (i = len / 2; i < len; i++)
+		{
+			c = str[i];
+			putchar(c);
+		}
 	}
 	printf("\n");
 }

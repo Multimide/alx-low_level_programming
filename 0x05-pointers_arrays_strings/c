@@ -1008,14 +1008,26 @@ extern char *stpncpy (char *__restrict __dest,
 # 11 "7-puts_half.c"
 void puts_half(char *str)
 {
- int len, c;
+ int len, c, i;
 
- len = strlen(str) - 1;
+ len = strlen(str);
 
- for (i = len / 2; i <= len; i++)
+ if (len % 2 != 0)
  {
-  c = str[i];
-  putchar(c);
+  for (i = (len / 2) + 1; i < len; i++)
+  {
+   c = str[i];
+   putchar(c);
+  }
+ }
+
+ else
+ {
+  for (i = len / 2; i < len; i++)
+  {
+   c = str[i];
+   putchar(c);
+  }
  }
  printf("\n");
 }
