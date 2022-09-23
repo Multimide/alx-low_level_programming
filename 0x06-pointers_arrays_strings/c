@@ -1026,4 +1026,5 @@ char *cap_string(char *z)
    }
   }
  }
+ return (z);
 }
