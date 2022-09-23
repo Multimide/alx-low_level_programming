@@ -5,6 +5,8 @@
  * _strcmp - compares two strings
  * @s1: string to be compared
  * @s2: string to be compared
+ *
+ * Return: difference in length
  */
 
 int _strcmp(char *s1, char *s2)
