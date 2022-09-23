@@ -1,10 +1,10 @@
-# 1 "0-strcat.c"
+# 1 "1-strncat.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "0-strcat.c"
+# 1 "1-strncat.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,7 +722,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "0-strcat.c" 2
+# 2 "1-strncat.c" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 26 "/usr/include/string.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -1002,29 +1002,17 @@ extern char *stpncpy (char *__restrict __dest,
      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
 # 499 "/usr/include/string.h" 3 4
 
-# 3 "0-strcat.c" 2
-# 12 "0-strcat.c"
+# 3 "1-strncat.c" 2
+# 13 "1-strncat.c"
 
-# 12 "0-strcat.c"
-char *_strcat(char *dest, char *src)
+# 13 "1-strncat.c"
+char *_strncat(char *dest, char *src, int n)
 {
- int len1;
- int len2;
- int i;
+ int index = 0, dest_len = 0;
 
- len1 = 0;
- len2 = 0;
-
- while (src[len1] != '\0')
-  len1++;
-
- while (dest[len2] != '\0')
-  len2++;
-
- for (i = 0; i <= len1; i++)
- {
-  dest[len2] = src[1];
-  len2++;
- }
+ while (dest[index++])
+  dest_len++;
+ for (index = 0; src[index] && index < n; index++)
+  dest[dest_len++] = src[index];
  return (dest);
 }
